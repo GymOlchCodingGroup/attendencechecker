@@ -1,7 +1,6 @@
 package attendencechecker.grabber;
 
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
 
 import com.github.sarxos.webcam.Webcam;
 import com.google.zxing.BinaryBitmap;

@@ -1,15 +1,7 @@
 package attendencechecker;
 
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Event;
-import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Listener;
-
 import java.awt.Dimension;
 import java.awt.Frame;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JRootPane;
@@ -18,22 +10,25 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.awt.SWT_AWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.graphics.Device;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Combo;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Event;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Listener;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.wb.swt.SWTResourceManager;
 
 import com.github.sarxos.webcam.Webcam;
 import com.github.sarxos.webcam.WebcamPanel;
 import com.github.sarxos.webcam.WebcamResolution;
-import com.google.zxing.Result;
 
 import attendencechecker.grabber.QRCodeGrabber;
 import attendencechecker.grabber.ScannerGrabber;
 import attendencechecker.observer.Observer;
-
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Combo;
-import org.eclipse.wb.swt.SWTResourceManager;
 
 public class MainApp implements Observer<String> {
 
@@ -161,14 +156,6 @@ public class MainApp implements Observer<String> {
 					panel.start();
 					shell.pack();
 					shell.layout();
-
-					System.out.println("Panel is valid: " + panel.isValid());
-					System.out.println(panel.getWebcam().getName());
-					System.out.println("Panel started: " + panel.isStarted());
-					for (int i = 0; i < root.getContentPane().countComponents(); i++) {
-						System.out.println(root.getContentPane().getComponent(i).toString());
-					}
-					System.out.println();
 				} else {
 					System.out.println("No webcams found...");
 				}
