@@ -1,0 +1,2 @@
+# attendencechecker
+Checking attendance and notifying parents of missing students at schools is time consuming. With the help of Attendencechecker, this should be simplified. Students have an individualised QR code that they present to a camera of a computing device as soon as they enter the classroom (attendance check). After a certain period of time after the beginning of a course, the system looks up who should be here and who is here. The parents of absent students are notified by e-mail that their child is not present.
